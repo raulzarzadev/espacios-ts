@@ -1,5 +1,5 @@
 import Head from '@comps/Head'
-import Home from '@comps/Home'
+import Home from 'src/views/Home'
 import type { NextPage } from 'next'
 
 const HomePage: NextPage = () => {

@@ -4,10 +4,9 @@ import { Counter } from '../Conuter'
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <header>Header</header>
-      <main>{children}</main>
-      <footer>Footer
-      </footer>
+      <header className="h-[3rem]">Header</header>
+      <main className='min-h-[calc(100vh-6rem)]'>{children}</main>
+      <footer className="h-[3rem]">Footer</footer>
     </>
   )
 }
