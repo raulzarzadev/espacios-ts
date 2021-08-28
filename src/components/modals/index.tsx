@@ -1,6 +1,6 @@
 import Icon from '@comps/Icon'
 import { ReactNode, useState } from 'react'
-
+import Button from '@comps/inputs/Button'
 export default function Modal({
   OpenComponent,
   openProps,
@@ -60,28 +60,26 @@ export default function Modal({
                 {children}
               </div>
               {/* 	<!--Footer--> */}
-              <div className="flex justify-end pt-2 space-x-14">
+              <div className="flex justify-center pt-2 space-x-14">
                 {cancelButton && (
-                  <button
-                    className="px-4 bg-gray-200 p-3 rounded text-black hover:bg-gray-300 font-semibold"
+                  <Button
+                    label="Cancelar"
+                    variant='outlined'
                     onClick={() => {
                       onCancel()
                       handleClose()
                     }}
-                  >
-                    Cancel
-                  </button>
+                  />
                 )}
                 {continueButton && (
-                  <button
-                    className="px-4 bg-blue-500 p-3 ml-3 rounded-lg  hover:bg-teal-400"
+                  <Button
+                    //className="px-4 bg-blue-500 p-3 ml-3 rounded-lg  hover:bg-teal-400"
+                    label="Continuar"
                     onClick={() => {
                       onContinue()
                       handleClose()
                     }}
-                  >
-                    Continue
-                  </button>
+                  />
                 )}
               </div>
             </div>

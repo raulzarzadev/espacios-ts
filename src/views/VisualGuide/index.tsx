@@ -7,6 +7,7 @@ import Button from '@comps/inputs/Button'
 import Select from '@comps/inputs/Select'
 import Text from '@comps/inputs/Text'
 import TextArea from '@comps/inputs/TextArea'
+import Link from '@comps/Link'
 import Modal from '@comps/modals'
 
 import { AiOutlineSave } from '@react-icons/all-files/ai/AiOutlineSave'
@@ -105,6 +106,7 @@ export default function VisualGuide() {
                 size="sm"
                 icon={<Icon name="save" />}
               />
+              <Link href="/">plain link</Link>
             </div>
           </div>
         </section>
@@ -122,13 +124,17 @@ export default function VisualGuide() {
           <div className="text-lg font-bold text-center">Modals</div>
           <div className="flex flex-wrap justify-center">
             <div className="grid gap-2 ">
-              <Modal OpenComponent={Button} openProps={{label:'Abir Modal'}} title='Modal title' onCancel={()=>console.log('cancel') } cancelButton >
-                <div>
-                  Modal
-                </div>
-
+              <Modal
+                OpenComponent={Button}
+                openProps={{ label: 'Abir Modal' }}
+                title="Modal title"
+                onCancel={() => console.log('cancel')}
+                cancelButton
+                continueButton
+                onContinue={() => console.log('Continue')}
+              >
+                <div>Modal</div>
               </Modal>
-              
             </div>
           </div>
         </section>

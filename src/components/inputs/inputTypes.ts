@@ -37,5 +37,6 @@ export interface buttonProps {
   fullWidth?: boolean
   iconOnly?: boolean
   icon?: ReactNode
+  onClick?: Function
 }
 
