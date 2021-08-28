@@ -9,6 +9,7 @@ export default function Icon({
   size?: string
 }) {
   const Icon = ICON_LIST[name]
+  if(!Icon) return name
   return <Icon size={sizign[size]}/>
 }
 

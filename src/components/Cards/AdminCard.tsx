@@ -1,12 +1,12 @@
 import Image from 'next/image'
+import { testImage } from 'src/assets/images'
 
 export default function AdminCard({
   label = 'label',
-  bgImage = 'https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aG9tZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+  bgImage = testImage
 }) {
   return (
-    <div className="group relative min-h-[8rem] min-w-[8rem] rounded-lg shadow-xl ">
-      
+    <div className="group relative min-h-[8rem] min-w-[8rem] rounded-lg shadow-xl ">  
       <Image
         src={bgImage}
         layout="fill"

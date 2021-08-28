@@ -1,10 +1,13 @@
 import AdminCard from '@comps/Cards/AdminCard'
+import EspacioCard from '@comps/Cards/EspacioCard'
+import ServicioCard from '@comps/Cards/ServicioCard'
 import Chip from '@comps/Chip'
 import Icon from '@comps/Icon'
 import Button from '@comps/inputs/Button'
 import Select from '@comps/inputs/Select'
 import Text from '@comps/inputs/Text'
 import TextArea from '@comps/inputs/TextArea'
+import Modal from '@comps/modals'
 
 import { AiOutlineSave } from '@react-icons/all-files/ai/AiOutlineSave'
 
@@ -110,6 +113,22 @@ export default function VisualGuide() {
           <div className="flex flex-wrap justify-center">
             <div className="grid gap-2 ">
               <AdminCard />
+              <EspacioCard />
+              <ServicioCard />
+            </div>
+          </div>
+        </section>
+        <section>
+          <div className="text-lg font-bold text-center">Modals</div>
+          <div className="flex flex-wrap justify-center">
+            <div className="grid gap-2 ">
+              <Modal OpenComponent={Button} openProps={{label:'Abir Modal'}} title='Modal title' onCancel={()=>console.log('cancel') } cancelButton >
+                <div>
+                  Modal
+                </div>
+
+              </Modal>
+              
             </div>
           </div>
         </section>

@@ -7,6 +7,7 @@ export default function Button({
   fullWidth = false,
   iconOnly,
   icon,
+  children,
   ...rest
 }: buttonProps) {
   return (
