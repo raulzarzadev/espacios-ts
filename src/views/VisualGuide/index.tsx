@@ -4,10 +4,12 @@ import ServicioCard from '@comps/Cards/ServicioCard'
 import Chip from '@comps/Chip'
 import Icon from '@comps/Icon'
 import Button from '@comps/inputs/Button'
+import Counter from '@comps/inputs/Coun}ter'
 import Select from '@comps/inputs/Select'
 import Text from '@comps/inputs/Text'
 import TextArea from '@comps/inputs/TextArea'
 import Link from '@comps/Link'
+import Signin from '@comps/Login/signin'
 import Modal from '@comps/modals'
 
 import { AiOutlineSave } from '@react-icons/all-files/ai/AiOutlineSave'
@@ -107,6 +109,7 @@ export default function VisualGuide() {
                 icon={<Icon name="save" />}
               />
               <Link href="/">plain link</Link>
+              <Counter />
             </div>
           </div>
         </section>
@@ -135,6 +138,14 @@ export default function VisualGuide() {
               >
                 <div>Modal</div>
               </Modal>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div className="text-lg font-bold text-center">Views</div>
+          <div className="flex flex-wrap justify-center">
+            <div className="grid gap-2 ">
+             <Signin/>
             </div>
           </div>
         </section>

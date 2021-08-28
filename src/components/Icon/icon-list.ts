@@ -7,6 +7,8 @@ import { TiDocumentText } from '@react-icons/all-files/ti/TiDocumentText'
 import { TiCogOutline } from '@react-icons/all-files/ti/TiCogOutline'
 import { TiPhoneOutline } from '@react-icons/all-files/ti/TiPhoneOutline'
 import { TiTimes } from '@react-icons/all-files/ti/TiTimes'
+import { TiPlusOutline } from '@react-icons/all-files/ti/TiPlusOutline'
+import { TiMinusOutline } from '@react-icons/all-files/ti/TiMinusOutline'
 import React from 'react'
 
 const ICON_LIST: { [index: string]: React.ElementType } = {
@@ -16,6 +18,8 @@ const ICON_LIST: { [index: string]: React.ElementType } = {
   document: TiDocumentText,
   gear: TiCogOutline,
   phone: TiPhoneOutline,
-  cross: TiTimes
+  cross: TiTimes,
+  plus:TiPlusOutline,
+  minus:TiMinusOutline
 }
 export default ICON_LIST

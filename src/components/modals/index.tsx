@@ -1,6 +1,7 @@
 import Icon from '@comps/Icon'
 import { ReactNode, useState } from 'react'
 import Button from '@comps/inputs/Button'
+import Division from '@comps/Division'
 export default function Modal({
   OpenComponent,
   openProps,
@@ -54,7 +55,7 @@ export default function Modal({
                 </p>
               </div>
 
-              <div className="border-b-2 mt-4 opacity-25" />
+              <Division />
               {/* 	<!--Body--> */}
               <div className="my-5 mr-5 ml-5 flex justify-center">
                 {children}
@@ -64,7 +65,7 @@ export default function Modal({
                 {cancelButton && (
                   <Button
                     label="Cancelar"
-                    variant='outlined'
+                    variant="outlined"
                     onClick={() => {
                       onCancel()
                       handleClose()
