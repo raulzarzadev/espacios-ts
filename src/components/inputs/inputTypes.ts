@@ -1,4 +1,4 @@
-import { ReactChild, ReactNode } from "react";
+import { ReactChild, ReactNode } from 'react'
 
 export interface stylingObject {
   [index: string]: string
@@ -13,7 +13,7 @@ export interface selectOption {
 }
 
 export interface textProps {
-  label: string
+  label?: string
   variant?: string
   size?: string
   fullWidth?: boolean
@@ -21,13 +21,14 @@ export interface textProps {
   errorText?: string
   placeholder?: string
   value?: string | number
+  type?: string
 }
 export interface selectProps extends textProps {
   options: Array<selectOption>
 }
 
 export interface textAreaProps extends textProps {
-  rows? : number | string
+  rows?: number | string
 }
 
 export interface buttonProps {
@@ -39,4 +40,3 @@ export interface buttonProps {
   icon?: ReactNode
   onClick?: Function
 }
-

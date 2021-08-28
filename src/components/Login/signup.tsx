@@ -9,9 +9,8 @@ import * as yup from 'yup'
 
 const schema = yup.object().shape({
   email: yup.string().email().required(),
-  password: yup.string().required()
 })
-export default function Signin() {
+export default function Signup() {
   const {
     register,
     handleSubmit,
@@ -27,7 +26,7 @@ export default function Signin() {
         {'< Logo />'}
       </div>
       <p className="w-4/5 mx-auto text-center my-4">
-        Optimiza la gestión de espacios. Incrementa tus ganancias.
+        Registrate
       </p>
       <form
         className="flex flex-col items-center w-3/5 mx-auto "
@@ -38,30 +37,20 @@ export default function Signin() {
             {...register('email')}
             placeholder="correo"
             errorText={errors?.email?.message}
+            helperText='Recibiras un correo para continuar'
             fullWidth
           />
         </div>
-        <div className="my-2 w-full">
-          <Text
-          type='password'
-            {...register('password')}
-            placeholder="contraseña"
-            errorText={errors?.password?.message}
-            fullWidth
-          />
-        </div>
+      
         <div className="my-4 w-full">
-          <Button label="Ingresar" fullWidth/>
+          <Button label="Enviar correo" fullWidth/>
         </div>
       </form>
       <div className="flex flex-col items-center ">
         <div className="my-4">
-          <Link href="/">¿Olvidaste tu contraseña?</Link>
+          <Link href="/">¿Ya tienes cuenta?</Link>
         </div>
-        <Division />
-        <div className="my-4">
-          <Button label="Registrate" variant="third" />
-        </div>
+      
       </div>
     </div>
   )

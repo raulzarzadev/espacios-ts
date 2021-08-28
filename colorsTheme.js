@@ -23,6 +23,9 @@ const colors = {
     DEFAULT: '#e6e6e6',
     light: '#fff',
     dark: '#d9d7d7'
+  },
+  danger: {
+    DEFAULT: '#ff3d3d'
   }
 }
 

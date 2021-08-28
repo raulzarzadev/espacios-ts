@@ -13,7 +13,7 @@ export default function Text({
 }: textProps) {
  
   return (
-    <label className="relative">
+    <label className="relative flex flex-col">
       {label && <div className="text-sm font-semibold">{label}</div>}
       <input
         placeholder={placeholder}
@@ -30,8 +30,10 @@ export default function Text({
     `}
         {...rest}
       />
-      {helperText && !errorText && <span>{helperText}</span>}
-      {errorText && <span>{errorText}</span>}
+      {helperText && !errorText && (
+        <span className="text-sm opacity-50">{helperText}</span>
+      )}
+      {errorText && <span className="text-sm text-danger">{errorText}</span>}
     </label>
   )
 }
